@@ -1,0 +1,24 @@
+version: 3.0.2
+apkFileName: Instagram.apk
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: 14
+  targetSdkVersion: 28
+versionInfo:
+  versionCode: 1
+  versionName: 1.0.0-alpha
+resourcesInfo:
+  packageId: 127
+doNotCompress:
+- arsc
+- jpg
+- png
+- webp
+- firebase-common.properties
+- firebase-database.properties
+- firebase-storage.properties
+- play-services-base.properties
+- play-services-basement.properties
+- play-services-tasks.properties
