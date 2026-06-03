@@ -16,14 +16,12 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Install apktool
+      - name: Download Apktool
         run: |
-          wget https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool -O /usr/local/bin/apktool
-          wget https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.9.3.jar -O /usr/local/bin/apktool.jar
-          chmod +x /usr/local/bin/apktool
+          wget https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.9.3.jar -O apktool.jar
 
       - name: Compile APK
-        run: apktool b Instagram -o Instagram-compiled.apk
+        run: java -jar apktool.jar b Instagram -o Instagram-compiled.apk
 
       - name: Upload APK
         uses: actions/upload-artifact@v3
